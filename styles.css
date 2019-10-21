@@ -1,14 +1,47 @@
 body {
+  display: grid;
+  grid:
+    "header" auto
+    "nav" auto
+    "main" 0.5fr
+    "footer" auto / 0.5fr;
+
+  grid-gap: 1.25em;
+  /*padding: 0.25em;*/
+  background: dimgray;
+}
+
+@media (min-width: 35em) {
+  body {
+    grid:
+      "header header" auto
+      "nav main" 0.35fr
+      "nav footer" auto
+      / 12em 0.35fr;
+  }
 }
 
 header {
+  grid-area: header;
 }
 
-navigation {
+nav {
+  grid-area: nav;
 }
 
 main {
+  grid-area: main;
 }
 
 footer {
+  grid-area: footer;
+}
+
+header,
+nav,
+main,
+footer {
+  background: lightgrey;
+  padding: 1em;
+  font-variant: small-caps;
 }
