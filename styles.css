@@ -3,22 +3,26 @@ body {
   grid:
     "header" auto
     "nav" auto
-    "main" 0.5fr
-    "footer" auto / 0.5fr;
+    "main" auto
+    "footer" auto / 1fr;
 
-  grid-gap: 1.25em;
+  grid-gap: 1em;
+  min-height: 100vh;
   /*padding: 0.25em;*/
   background: dimgray;
 }
 
-@media (min-width: 35em) {
+@media (min-width: 42em) {
   body {
     grid:
       "header header" auto
-      "nav main" 0.35fr
-      "nav footer" auto
-      / 12em 0.35fr;
+      "nav main" 1fr
+      "nav footer" auto / 12em 1fr;
   }
+}
+
+body {
+  background: tan;
 }
 
 header {
